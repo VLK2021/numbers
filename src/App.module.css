@@ -1,8 +1,39 @@
 .wrap {
     width: 100%;
+    min-height: 100vh;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: var(--var-bg);
+}
+
+.info, .titleContainer {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+}
+
+.infoContainer {
+    width: 25%;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    height: 100%;
+    background-color: green;
+}
+
+.gameContainer {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
 }
