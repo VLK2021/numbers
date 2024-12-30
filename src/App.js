@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 import css from './App.module.css';
-import {GameBoard, Move, Time} from "./components";
+import {GameBoard, Move, Shuffle, Time} from "./components";
 
 
 function App() {
@@ -37,28 +37,28 @@ function App() {
 
     return (
         <main className={css.wrap}>
-            <section className={css.titleContainer}>
-                title
-            </section>
+            {/*<section className={css.titleContainer}>*/}
+            {/*    title*/}
+            {/*</section>*/}
 
             <section className={css.info}>
-                <div className={css.infoContainer}>
-                    <div className={css.time}>
+                <section className={css.infoContainer}>
+                    <article className={css.time}>
                         <Time time={time}/>
-                    </div>
+                    </article>
 
-                    <div className={css.move}>
+                    <article className={css.move}>
                         <Move moves={moves}/>
-                    </div>
+                    </article>
 
-                    <div className={css.btn}>
+                    <article className={css.btn}>
+                        <Shuffle shuffleTiles={shuffleTiles}/>
+                    </article>
+                </section>
 
-                    </div>
-                </div>
-
-                <div className={css.gameContainer}>
+                <section className={css.gameContainer}>
                     <GameBoard tiles={tiles} setTiles={setTiles} setMoves={setMoves}/>
-                </div>
+                </section>
             </section>
         </main>
     );

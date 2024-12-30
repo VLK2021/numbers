@@ -1,0 +1,27 @@
+.wrap {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #34d399, #10b981);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+}
+
+.wrap:hover {
+    background: linear-gradient(90deg, #10b981, #34d399);
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    color: lightpink;
+}
+
+.wrap:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
