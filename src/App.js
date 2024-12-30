@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 import css from './App.module.css';
-import {GameBoard} from "./components";
+import {GameBoard, Move, Time} from "./components";
 
 
 function App() {
@@ -43,7 +43,17 @@ function App() {
 
             <section className={css.info}>
                 <div className={css.infoContainer}>
+                    <div className={css.time}>
+                        <Time time={time}/>
+                    </div>
 
+                    <div className={css.move}>
+                        <Move moves={moves}/>
+                    </div>
+
+                    <div className={css.btn}>
+
+                    </div>
                 </div>
 
                 <div className={css.gameContainer}>

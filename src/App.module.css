@@ -28,7 +28,10 @@
     justify-content: space-between;
     padding: 0 0.5rem;
     height: 100%;
-    background-color: green;
+}
+
+.time, .move, .btn {
+    width: 100%;
 }
 
 .gameContainer {

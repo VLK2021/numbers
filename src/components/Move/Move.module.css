@@ -1,0 +1,22 @@
+.wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.wrap > p {
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: green;
+}
+
+.current {
+    font-weight: bold;
+    font-size: 3rem;
+    color: crimson;
+}
