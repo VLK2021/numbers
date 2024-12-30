@@ -37,10 +37,6 @@ function App() {
 
     return (
         <main className={css.wrap}>
-            {/*<section className={css.titleContainer}>*/}
-            {/*    title*/}
-            {/*</section>*/}
-
             <section className={css.info}>
                 <section className={css.infoContainer}>
                     <article className={css.time}>

@@ -20,3 +20,26 @@
     font-size: 3rem;
     color: crimson;
 }
+
+@media (max-width: 1024px) {
+    .wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .current {
+        margin-left: 1rem;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
