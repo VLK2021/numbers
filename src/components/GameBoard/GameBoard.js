@@ -5,7 +5,7 @@ import {Tile} from "../Tile/Tile";
 
 
 const GameBoard = (props) => {
-    const {tiles, setTiles, setMoves} = props;
+    const {tiles, setTiles, setMoves, setIsWin} = props;
 
     const moveTile = (index) => {
         const emptyIndex = tiles.indexOf(null);
@@ -20,13 +20,12 @@ const GameBoard = (props) => {
         }
     };
 
-    const isGameWon = tiles.every((tile, index) => tile === null || tile === index + 1);
-
     useEffect(() => {
-        if (isGameWon) {
-            alert(`You won in moves!`);
+        if (tiles.every((tile, index) => tile === null || tile === index + 1)) {
+            setIsWin(true);
+            console.log('abra kadabra');
         }
-    }, [isGameWon]);
+    }, [tiles]);
 
 
     return (

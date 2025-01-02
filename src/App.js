@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from 'react';
 
 import css from './App.module.css';
-import {GameBoard, Move, Shuffle, Time} from "./components";
+import {GameBoard, Move, PopUp, Shuffle, Time} from "./components";
 
 
 function App() {
     const [time, setTime] = useState(0);
     const [moves, setMoves] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
+    const [isWin, setIsWin] = useState(false);
     const [tiles, setTiles] = useState([]);
 
     useEffect(() => {
@@ -28,6 +29,7 @@ function App() {
         setTime(0);
         setMoves(0);
         setIsRunning(true);
+        setIsWin(false);
     };
 
     useEffect(() => {
@@ -53,9 +55,20 @@ function App() {
                 </section>
 
                 <section className={css.gameContainer}>
-                    <GameBoard tiles={tiles} setTiles={setTiles} setMoves={setMoves}/>
+                    <GameBoard
+                        tiles={tiles}
+                        setTiles={setTiles}
+                        setMoves={setMoves}
+                        setIsWin={setIsWin}
+                    />
                 </section>
             </section>
+
+            {isWin && <PopUp
+                setIsWin={setIsWin}
+                setTime={setTime}
+                setMoves={setMoves}
+            />}
         </main>
     );
 }

@@ -1,0 +1,19 @@
+.wrap {
+    width: 80%;
+    min-height: 80vh;
+    background: snow;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    border: 1px solid green;
+    position: absolute;
+    top: 10%;
+    left: auto;
+}
+
+.close {
+    width: 100%;
+    text-align: end;
+    padding: 0 1rem;
+    cursor: pointer;
+}
