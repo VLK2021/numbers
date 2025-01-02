@@ -20,13 +20,13 @@ const GameBoard = (props) => {
         }
     };
 
-    // const isGameWon = tiles.every((tile, index) => tile === null || tile === index + 1);
-    //
-    // useEffect(() => {
-    //     if (isGameWon) {
-    //         alert(`You won in moves!`);
-    //     }
-    // }, [isGameWon]);
+    const isGameWon = tiles.every((tile, index) => tile === null || tile === index + 1);
+
+    useEffect(() => {
+        if (isGameWon) {
+            alert(`You won in moves!`);
+        }
+    }, [isGameWon]);
 
 
     return (
