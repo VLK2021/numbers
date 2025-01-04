@@ -5,7 +5,7 @@ import {Tile} from "../Tile/Tile";
 
 
 const GameBoard = (props) => {
-    const {tiles, setTiles, setMoves, setIsWin} = props;
+    const {tiles, setTiles, setMoves, setIsWin, setIsRunning} = props;
 
     const moveTile = (index) => {
         const emptyIndex = tiles.indexOf(null);
@@ -22,6 +22,7 @@ const GameBoard = (props) => {
 
     useEffect(() => {
         if (tiles.every((tile, index) => tile === null || tile === index + 1)) {
+            setIsRunning(false);
             setIsWin(true);
             console.log('abra kadabra');
         }
