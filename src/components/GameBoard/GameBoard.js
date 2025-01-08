@@ -24,7 +24,6 @@ const GameBoard = (props) => {
         if (tiles.every((tile, index) => tile === null || tile === index + 1)) {
             setIsRunning(false);
             setIsWin(true);
-            console.log('abra kadabra');
         }
     }, [tiles]);
 
