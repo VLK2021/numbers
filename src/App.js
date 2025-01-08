@@ -60,6 +60,7 @@ function App() {
                         setTiles={setTiles}
                         setMoves={setMoves}
                         setIsWin={setIsWin}
+                        setIsRunning={setIsRunning}
                     />
                 </section>
             </section>
@@ -68,6 +69,9 @@ function App() {
                 setIsWin={setIsWin}
                 setTime={setTime}
                 setMoves={setMoves}
+                setIsRunning={setIsRunning}
+                time={time}
+                moves={moves}
             />}
         </main>
     );
