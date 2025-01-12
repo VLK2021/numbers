@@ -27,7 +27,12 @@ const PopUp = (props) => {
                 <IoClose onClick={() => setIsWin(close)}/>
             </div>
 
-            <p>{formatTime()}- {moves}</p>
+            <p>congratulation!!!   you are won!!!!</p>
+            <div className={css.text}>Your time:</div>
+            <div>{formatTime()}</div>
+
+            <div className={css.text}>your moves:</div>
+            <div>{moves}</div>
 
         </section>
     );

@@ -1,22 +1,122 @@
 .wrap {
-    width: 80%;
+    width: 90%;
+    max-width: 500px;
     min-height: 80vh;
-    background: snow;
-    padding: 1rem;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #d4fc79, #96e6a1, #ffffff);
+    padding: 2rem;
     box-sizing: border-box;
-    border-radius: 0.5rem;
-    border: 1px solid green;
+    border-radius: 1rem;
+    border: 2px solid green;
     position: absolute;
-    top: 10%;
-    left: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .close {
-    width: 100%;
-    text-align: end;
-    padding: 0 0.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     cursor: pointer;
+    font-size: 2rem;
+    color: red;
+    transition: transform 0.3s ease;
+}
+
+.close:hover {
+    transform: scale(1.2);
+}
+
+.wrap p {
+    font-size: 2rem;
+    text-transform: uppercase;
     font-weight: bold;
+    color: blueviolet;
+    margin-bottom: 1rem;
+}
+
+.text {
     font-size: 1.5rem;
-    color: green;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: royalblue;
+    margin-top: 2rem;
+}
+
+.wrap div {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: darkgreen;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .wrap {
+        width: 95%;
+        min-height: 50vh;
+        padding: 1.5rem;
+        border-radius: 0.8rem;
+    }
+
+    .close {
+        font-size: 1.8rem;
+    }
+
+    .wrap p {
+        font-size: 1.8rem;
+    }
+
+    .text {
+        font-size: 1.2rem;
+    }
+
+    .wrap div {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrap {
+        width: 100%;
+        height: auto;
+        min-height: 40vh;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .close {
+        font-size: 1.5rem;
+    }
+
+    .wrap p {
+        font-size: 1.5rem;
+    }
+
+    .text {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .wrap div {
+        font-size: 1rem;
+    }
 }
